@@ -72,23 +72,28 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
         
         card.innerHTML = `
-            <div class="project-image">
-                <img src="${imageUrl}" alt="${project.name}" loading="lazy" 
-                     onerror="this.parentElement.innerHTML = '<div class=\\'project-placeholder\\' style=\\'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\\'><span>📁</span></div>'">
-            </div>
-            <div class="project-info">
-                <h3>${project.name.replace(/-/g, ' ')}</h3>
-                <p>${description}</p>
-                <div class="project-tags">
-                    ${tags.slice(0, 3).map(tag => `<span>${tag}</span>`).join('')}
-                    ${project.stargazers_count ? `<span>⭐ ${project.stargazers_count}</span>` : ''}
-                    ${project.forks_count ? `<span>🔄 ${project.forks_count}</span>` : ''}
-                </div>
-                <a href="${project.html_url}" target="_blank" class="btn btn-small">
+    <div class="project-image">...</div>
+    <div class="project-info">
+        <h3>...</h3>
+        <p>...</p>
+        <div class="project-tags">...</div>
+        <!-- Conditional: TWO buttons for Portfolio, ONE for others -->
+        ${project.name === 'Portfolio-Website' ? `
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://tanaderizcky.github.io/Portfolio-Website/" target="_blank" class="btn btn-small">
+                    🌐 View Result
+                </a>
+                <a href="${project.html_url}" target="_blank" class="btn btn-small" style="background: #6c757d;">
                     📂 View Code
                 </a>
             </div>
-        `;
+        ` : `
+            <a href="${project.html_url}" target="_blank" class="btn btn-small">
+                📂 View Code
+            </a>
+        `}
+    </div>
+`;
         
         return card;
     }
