@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         maxProjects: 3,
         
         // Topics to include (repos MUST have at least one of these)
-        includeTopics: ['portfolio', 'project'],
+        includeTopics: [], // ← Empty array means: include ALL repos!
         
         // Repos to hide (by name)
         hideRepos: [
             'tanaderizcky.github.io',  // Your portfolio repo
-            'test-repo',
-            'learning',
-            'temp'
+            //'test-repo', // ← Comment out or remove if you want to show test repos
+            //'learning',
+            //'temp'
         ],
         
         // ============================================================
