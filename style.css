@@ -230,39 +230,71 @@ nav {
 
 /* ========== PROJECTS ========== */
 #projects {
-    background: #31323e; /* background projects */
+    background: #31323e; /* Your dark background */
+    padding: 80px 0;
 }
 
+#projects h2 {
+    color: #ffffff; /* White text for contrast */
+}
+
+#projects .section-subtitle {
+    color: #cccccc; /* Light gray for subtitle */
+}
+
+/* Project Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
+/* Project Card */
 .project-card {
-    background: #f8f9fa;
-    border-radius: 10px;
+    background: #f8f9fa; /* Light card background */
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: nothing; /* No movement on hover */
+    box-shadow: 0 15px 35px rgba(96, 81, 155, 0.4);
+    /* Purple glow using your hex #60519b */
 }
 
+/* Project Image */
 .project-image {
-    height: 200px;
-    background: #ddd;
+    height: auto;        /* Auto height based on image */
+    min-height: 150px;   /* Minimum height */
+    max-height: 250px;   /* Maximum height */
     overflow: hidden;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;        /* Auto height maintains aspect ratio */
+    object-fit: contain; /* Show entire image without cropping */
+    max-height: 250px;   /* Don't exceed this height */
 }
 
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    background: linear-gradient(135deg, #60519b, #7b6bb5); /* Using your color */
+}
+
+/* Project Info */
 .project-info {
     padding: 20px;
 }
@@ -270,14 +302,18 @@ nav {
 .project-info h3 {
     margin-bottom: 10px;
     color: #333;
+    font-size: 1.2rem;
+    text-transform: capitalize;
 }
 
 .project-info p {
     color: #666;
     font-size: 0.95rem;
     margin-bottom: 15px;
+    line-height: 1.5;
 }
 
+/* Project Tags */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -293,18 +329,73 @@ nav {
     color: #495057;
 }
 
+/* Button (Using your hex) */
 .btn-small {
+    display: inline-block;
     padding: 8px 20px;
-    background: #60519b; /* background button small */
+    background: #60519b; /* Your purple */
     color: white;
     border-radius: 20px;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-small:hover {
-    background: #60519b; /* background button small hover */
+    background: #4a3d7a; /* Darker purple (your hover) */
+    transform: scale(1.03);
+}
+
+/* ========== EMPTY STATE (Using your colors) ========== */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px dashed #60519b; /* Your purple */
+}
+
+.empty-state-content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.empty-state-content p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.empty-state-content .emoji {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.empty-state-content .sub-message {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+/* ========== LOADING & ERROR ========== */
+.loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    color: #cccccc;
+    font-size: 1.2rem;
+}
+
+.error-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #dc3545;
+    background: #f8d7da;
+    border-radius: 8px;
 }
 
 /* ========== CONTACT ========== */
