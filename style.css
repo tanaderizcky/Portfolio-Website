@@ -329,6 +329,26 @@ nav {
     color: #495057;
 }
 
+/* ===== BUTTON GROUP (Side by side) ===== */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.button-group .btn-small {
+    flex: 0 1 auto;  /* Prevents buttons from stretching */
+    margin: 0;       /* Remove any default margin */
+}
+
+/* If buttons are still stacking, force inline-block */
+.btn-small {
+    display: inline-block !important;
+    width: auto !important;
+}
+
 /* Button (Using your hex) */
 .btn-small {
     display: inline-block;
