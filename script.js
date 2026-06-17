@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 ${project.forks_count ? `<span>🔄 ${project.forks_count}</span>` : ''}
             </div>
             ${project.name === 'Portfolio-Website' ? `
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div div class="button-group">
                     <a href="https://tanaderizcky.github.io/Portfolio-Website/" target="_blank" class="btn btn-small">
                         🌐 View Result
                     </a>
