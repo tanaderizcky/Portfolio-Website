@@ -87,9 +87,6 @@ document.addEventListener('DOMContentLoaded', async function() {
                 <div div class="button-group">
                     <a href="https://tanaderizcky.github.io/yun-yueduqi/index.html" target="_blank" class="btn btn-small">
                         🌐 View Result
-                    </a> 
-                    <a href="${project.html_url}" target="_blank" class="btn btn-small" style="background: #6c757d;">
-                        📂 View Code
                     </a>
                 </div>
             ` : `
