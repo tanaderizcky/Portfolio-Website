@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 ${project.stargazers_count ? `<span>⭐ ${project.stargazers_count}</span>` : ''}
                 ${project.forks_count ? `<span>🔄 ${project.forks_count}</span>` : ''}
             </div>
-            ${project.name === 'Portfolio-Website' ? ` 
+            ${project.name === 'yun-yueduqi' ? ` 
                 <div div class="button-group">
-                    <a href="https://tanaderizcky.github.io/Portfolio-Website/" target="_blank" class="btn btn-small">
+                    <a href="https://tanaderizcky.github.io/yun-yueduqi/index.html" target="_blank" class="btn btn-small">
                         🌐 View Result
                     </a> 
                     <a href="${project.html_url}" target="_blank" class="btn btn-small" style="background: #6c757d;">
